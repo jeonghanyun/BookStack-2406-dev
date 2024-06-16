@@ -9,7 +9,7 @@
                     class="mobile-menu-toggle">@icon('more')</button>
         </div>
     </div>
-
+    {{-- 정라잇 --}}
     <div class="flex-container-column items-center justify-center hide-under-l">
     @if(user()->hasAppAccess())
         @include('layouts.parts.header-search')
