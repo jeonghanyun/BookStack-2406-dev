@@ -24,7 +24,9 @@ jobs:
           GIT_COMMITTER_NAME: github-actions
           GIT_COMMITTER_EMAIL: github-actions@github.com
         run: |
-          git remote add target git@github.com:jeonghanyun/laravel-bookstack-dev-2406.git
+          git config --global user.name "${{ env.GIT_AUTHOR_NAME }}"
+          git config --global user.email "${{ env.GIT_AUTHOR_EMAIL }}"
+          git remote add target https://x-access-token:${{ secrets.RDG_BOOKSTACK_PHP }}@github.com/jeonghanyun/laravel-bookstack-dev-2406.git
           git fetch target
           git checkout RDG-240617_php
           git pull origin RDG-240617_php
